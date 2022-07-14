@@ -18,7 +18,8 @@ from django.urls import path, include
 from app1 import views           # 导入视图函数
 
 urlpatterns = [
-    # path('index/', views.index),  # 访问路由，指定视图函数
+    path('index/', views.index),  # 访问路由，指定视图函数
     path('', include('app2.urls')),
     path('', include('app1.urls')),
+    path('', include('app3.urls')),
 ]
