@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'app1',
     'app2',
     'app3',
+    'app4',
+    'app5',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +78,15 @@ WSGI_APPLICATION = 'myshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myshop',
+        'USER': 'root',
+        'PASSWORD': '123456789',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        }
     }
 }
 

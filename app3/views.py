@@ -54,4 +54,4 @@ def show_info(request):
 
 
 def welcome(request):
-    return render(request, 'app3/welcome.html')
+    return render(request, 'app3/base_include.html')
